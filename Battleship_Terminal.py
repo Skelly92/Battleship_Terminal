@@ -17,7 +17,44 @@ class Battleship():
         9 |A9 |B9 |C9 |D9 |E9 |F9 |G9 |H9 |I9 |J9 |
         10|A10|B10|C10|D10|E10|F10|G10|H10|I10|J10|
         """)
-    
-            
+
+        one_num = [1]
+        two_num = [2]
+        three_num = [3]
+        four_num = [4]
+        five_num = [5]
+        six_num = [6]
+        seven_num = [7]
+        eight_num = [8]
+        nine_num = [9]
+        ten_num = [10]
+
+        while len(two_num) < 10:
+          one_num.append (one_num[0])
+          two_num.append (two_num[0])
+          three_num.append (three_num[0])
+          four_num.append (four_num[0])
+          five_num.append (five_num[0])
+          six_num.append (six_num[0])
+          seven_num.append (seven_num[0])
+          eight_num.append (eight_num[0])
+          nine_num.append (nine_num[0])
+          ten_num.append (ten_num[0])
+        
+        one_list = dict(zip(["a","b","c","d","e","f","g","h","i","j"],one_num))
+        two_list = dict(zip(["a","b","c","d","e","f","g","h","i","j"],two_num))
+        three_list = dict(zip(["a","b","c","d","e","f","g","h","i","j"],three_num))
+        four_list = dict(zip(["a","b","c","d","e","f","g","h","i","j"],four_num))
+        five_list = dict(zip(["a","b","c","d","e","f","g","h","i","j"],five_num))
+        six_list = dict(zip(["a","b","c","d","e","f","g","h","i","j"],six_num))
+        seven_list = dict(zip(["a","b","c","d","e","f","g","h","i","j"],seven_num))
+        eight_list = dict(zip(["a","b","c","d","e","f","g","h","i","j"],eight_num))
+        nine_list = dict(zip(["a","b","c","d","e","f","g","h","i","j"],nine_num))
+        ten_list = dict(zip(["a","b","c","d","e","f","g","h","i","j"],ten_num))
+
+        #print (ten_list)
+        #print(ten_num)
+     
+       
 x = Battleship()
 x.grid()
