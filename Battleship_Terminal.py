@@ -99,16 +99,18 @@ class Battleship():
      
     def battleship_attack(self):
       grid = Battleship.ship_placement(self)
-      attack = input("Please enter the coordinates for where you wish to attack: ")
-
-      for key in grid:
-        if key == attack:
-          grid[key] = "X"
-          print("Boom")
-          break
-        else:
-          print("Splosh")
-          break
+      while True:
+        attack = input("Please enter the coordinates for where you wish to attack: ")
+        for key in grid:
+          if key == attack:
+            grid[key] = "X"
+            print("Boom")
+            break
+          elif attack == "End":
+            return False
+          else:
+            print("Splosh")
+            break
 
 
             
