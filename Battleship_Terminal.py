@@ -31,9 +31,30 @@ class Battleship():
       eight_list = {"A8": None,"B8": None,"C8":None,"D8":None,"E8":None,"F8": None,"G8":None,"H8":None,"I8":None,"J8":None}
       nine_list = {"A9": None,"B9": None,"C9":None,"D9":None,"E9":None,"F9": None,"G9":None,"H9":None,"I9":None,"J9":None}
       ten_list = {"A10": None,"B10": None,"C10":None,"D10":None,"E10":None,"F10": None,"G10":None,"H10":None,"I10":None,"J10":None}
+      battleship_grid = {**one_list, **two_list, **three_list, **four_list, **five_list, **six_list, **seven_list, **eight_list, **nine_list, **ten_list}
 
-      carrier_ship_start = input("Please type in the starting grid number and ending grid number where you would like to place the Carrier ship (5):")
-      print(ship_placement)
+      carrier_ship_one = input("Please type in the grid number Awhere you would like to place the Carrier ship: ")
+      carrier_ship_two = input("Please type in the grid number where you would like to place the Carrier ship: ")
+      carrier_ship_three = input("Please type in the grid number where you would like to place the Carrier ship: ")
+      carrier_ship_four = input("Please type in the grid number where you would like to place the Carrier ship: ")
+      carrier_ship_five = input("Please type in the grid number where you would like to place the Carrier ship: ")
+
+      print(carrier_ship_one)
+      print(carrier_ship_five)
+      for key in battleship_grid.keys():
+        if key == carrier_ship_one:
+          battleship_grid[key] = "O"
+        if key == carrier_ship_two:
+          battleship_grid[key] = "O"
+        if key == carrier_ship_three:
+          battleship_grid[key] = "O"
+        if key == carrier_ship_four:
+          battleship_grid[key] = "O"
+        if key == carrier_ship_five:
+          battleship_grid[key] = "O"
+      print (battleship_grid)
+      
+     
      
        
 x = Battleship()
