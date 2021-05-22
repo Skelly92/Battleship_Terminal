@@ -20,8 +20,8 @@ class Battleship():
         
         
     def ship_placement(self):
-      Battleship.grid(self)
-      one_list = {"A1": None,"B1": None,"C1":None,"D1":None,"E1":None,"F1": None,"G1":None,"H1":None,"I1":None,"J1":None}
+      
+      one_list = {"A1": "B","B1": None,"C1":None,"D1":None,"E1":None,"F1": None,"G1":None,"H1":None,"I1":None,"J1":None}
       two_list = {"A2": None,"B2": None,"C2":None,"D2":None,"E2":None,"F2": None,"G2":None,"H2":None,"I2":None,"J2":None}
       three_list = {"A3": None,"B3": None,"C3":None,"D3":None,"E3":None,"F3": None,"G3":None,"H3":None,"I3":None,"J3":None}
       four_list = {"A4": None,"B4": None,"C4":None,"D4":None,"E4":None,"F4": None,"G4":None,"H4":None,"I4":None,"J4":None}
@@ -33,70 +33,86 @@ class Battleship():
       ten_list = {"A10": None,"B10": None,"C10":None,"D10":None,"E10":None,"F10": None,"G10":None,"H10":None,"I10":None,"J10":None}
       battleship_grid = {**one_list, **two_list, **three_list, **four_list, **five_list, **six_list, **seven_list, **eight_list, **nine_list, **ten_list}
 
-      carrier_ship_one = input("Please type in the grid number Awhere you would like to place the Carrier ship: ")
-      carrier_ship_two = input("Please type in the grid number where you would like to place the Carrier ship: ")
-      carrier_ship_three = input("Please type in the grid number where you would like to place the Carrier ship: ")
-      carrier_ship_four = input("Please type in the grid number where you would like to place the Carrier ship: ")
-      carrier_ship_five = input("Please type in the grid number where you would like to place the Carrier ship: ")
+      # carrier_ship_one = input("Please type in the grid number Awhere you would like to place the Carrier ship: ")
+      # carrier_ship_two = input("Please type in the grid number where you would like to place the Carrier ship: ")
+      # carrier_ship_three = input("Please type in the grid number where you would like to place the Carrier ship: ")
+      # carrier_ship_four = input("Please type in the grid number where you would like to place the Carrier ship: ")
+      # carrier_ship_five = input("Please type in the grid number where you would like to place the Carrier ship: ")
 
-      battleship_one = input("Please type in the grid number where you would like to place the Battleship: ")
-      battleship_two = input("Please type in the grid number where you would like to place the Battleship: ")
-      battleship_three = input("Please type in the grid number where you would like to place the Battleship: ")
-      battleship_four = input("Please type in the grid number where you would like to place the Battleship: ")
+      # battleship_one = input("Please type in the grid number where you would like to place the Battleship: ")
+      # battleship_two = input("Please type in the grid number where you would like to place the Battleship: ")
+      # battleship_three = input("Please type in the grid number where you would like to place the Battleship: ")
+      # battleship_four = input("Please type in the grid number where you would like to place the Battleship: ")
 
-      cruiser_one = input("Please type in the grid number where you would like to place the Cruiser ship: ")
-      cruiser_two = input("Please type in the grid number where you would like to place the Cruiser ship: ")
-      cruiser_three = input("Please type in the grid number where you would like to place the Cruiser ship: ")
+      # cruiser_one = input("Please type in the grid number where you would like to place the Cruiser ship: ")
+      # cruiser_two = input("Please type in the grid number where you would like to place the Cruiser ship: ")
+      # cruiser_three = input("Please type in the grid number where you would like to place the Cruiser ship: ")
 
-      submarine_one = input("Please type in the grid number where you would like to place the Submarine: ")
-      submarine_two = input("Please type in the grid number where you would like to place the Submarine: ")
-      submarine_three = input("Please type in the grid number where you would like to place the Submarine: ")
+      # submarine_one = input("Please type in the grid number where you would like to place the Submarine: ")
+      # submarine_two = input("Please type in the grid number where you would like to place the Submarine: ")
+      # submarine_three = input("Please type in the grid number where you would like to place the Submarine: ")
 
-      destroyer_one = input("Please type in the grid number where you would like to place the Destroyer: ")
-      destroyer_two = input("Please type in the grid number where you would like to place the Destroyer: ")
+      # destroyer_one = input("Please type in the grid number where you would like to place the Destroyer: ")
+      # destroyer_two = input("Please type in the grid number where you would like to place the Destroyer: ")
 
-      print(carrier_ship_one)
-      print(carrier_ship_five)
-      for key in battleship_grid.keys():
-        if key == carrier_ship_one:
-          battleship_grid[key] = "B"
-        if key == carrier_ship_two:
-          battleship_grid[key] = "B"
-        if key == carrier_ship_three:
-          battleship_grid[key] = "B"
-        if key == carrier_ship_four:
-          battleship_grid[key] = "B"
-        if key == carrier_ship_five:
-          battleship_grid[key] = "B"
-        if key == battleship_one:
-          battleship_grid[key] = "B"
-        if key == battleship_two:
-          battleship_grid[key] = "B"
-        if key == battleship_three:
-          battleship_grid[key] = "B"
-        if key == battleship_four:
-          battleship_grid[key] = "B"
-        if key == cruiser_one:
-          battleship_grid[key] = "B"
-        if key == cruiser_two:
-          battleship_grid[key] = "B"
-        if key == cruiser_three:
-          battleship_grid[key] = "B"
-        if key == submarine_one:
-          battleship_grid[key] = "B"
-        if key == submarine_two:
-          battleship_grid[key] = "B"
-        if key == submarine_three:
-          battleship_grid[key] = "B"
-        if key == destroyer_one:
-          battleship_grid[key] = "B"
-        if key == destroyer_two:
-          battleship_grid[key] = "B"
-
-      print (battleship_grid)
+      # print(carrier_ship_one)
+      # print(carrier_ship_five)
+      # for key in battleship_grid.keys():
+      #   if key == carrier_ship_one:
+      #     battleship_grid[key] = "B"
+      #   if key == carrier_ship_two:
+      #     battleship_grid[key] = "B"
+      #   if key == carrier_ship_three:
+      #     battleship_grid[key] = "B"
+      #   if key == carrier_ship_four:
+      #     battleship_grid[key] = "B"
+      #   if key == carrier_ship_five:
+      #     battleship_grid[key] = "B"
+      #   if key == battleship_one:
+      #     battleship_grid[key] = "B"
+      #   if key == battleship_two:
+      #     battleship_grid[key] = "B"
+      #   if key == battleship_three:
+      #     battleship_grid[key] = "B"
+      #   if key == battleship_four:
+      #     battleship_grid[key] = "B"
+      #   if key == cruiser_one:
+      #     battleship_grid[key] = "B"
+      #   if key == cruiser_two:
+      #     battleship_grid[key] = "B"
+      #   if key == cruiser_three:
+      #     battleship_grid[key] = "B"
+      #   if key == submarine_one:
+      #     battleship_grid[key] = "B"
+      #   if key == submarine_two:
+      #     battleship_grid[key] = "B"
+      #   if key == submarine_three:
+      #     battleship_grid[key] = "B"
+      #   if key == destroyer_one:
+      #     battleship_grid[key] = "B"
+      #   if key == destroyer_two:
+      #     battleship_grid[key] = "B"
       
+      #print (battleship_grid)
+      return battleship_grid
+
      
-     
-       
+    def battleship_attack(self):
+      grid = Battleship.ship_placement(self)
+      attack = input("Please enter the coordinates for where you wish to attack: ")
+
+      for key in grid:
+        if key == attack:
+          grid[key] = "X"
+          print("Boom")
+          break
+        else:
+          print("Splosh")
+          break
+
+
+            
 x = Battleship()
-x.ship_placement()
+x.grid()
+#x.ship_placement()
+x.battleship_attack()
