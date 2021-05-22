@@ -39,19 +39,60 @@ class Battleship():
       carrier_ship_four = input("Please type in the grid number where you would like to place the Carrier ship: ")
       carrier_ship_five = input("Please type in the grid number where you would like to place the Carrier ship: ")
 
+      battleship_one = input("Please type in the grid number where you would like to place the Battleship: ")
+      battleship_two = input("Please type in the grid number where you would like to place the Battleship: ")
+      battleship_three = input("Please type in the grid number where you would like to place the Battleship: ")
+      battleship_four = input("Please type in the grid number where you would like to place the Battleship: ")
+
+      cruiser_one = input("Please type in the grid number where you would like to place the Cruiser ship: ")
+      cruiser_two = input("Please type in the grid number where you would like to place the Cruiser ship: ")
+      cruiser_three = input("Please type in the grid number where you would like to place the Cruiser ship: ")
+
+      submarine_one = input("Please type in the grid number where you would like to place the Submarine: ")
+      submarine_two = input("Please type in the grid number where you would like to place the Submarine: ")
+      submarine_three = input("Please type in the grid number where you would like to place the Submarine: ")
+
+      destroyer_one = input("Please type in the grid number where you would like to place the Destroyer: ")
+      destroyer_two = input("Please type in the grid number where you would like to place the Destroyer: ")
+
       print(carrier_ship_one)
       print(carrier_ship_five)
       for key in battleship_grid.keys():
         if key == carrier_ship_one:
-          battleship_grid[key] = "O"
+          battleship_grid[key] = "B"
         if key == carrier_ship_two:
-          battleship_grid[key] = "O"
+          battleship_grid[key] = "B"
         if key == carrier_ship_three:
-          battleship_grid[key] = "O"
+          battleship_grid[key] = "B"
         if key == carrier_ship_four:
-          battleship_grid[key] = "O"
+          battleship_grid[key] = "B"
         if key == carrier_ship_five:
-          battleship_grid[key] = "O"
+          battleship_grid[key] = "B"
+        if key == battleship_one:
+          battleship_grid[key] = "B"
+        if key == battleship_two:
+          battleship_grid[key] = "B"
+        if key == battleship_three:
+          battleship_grid[key] = "B"
+        if key == battleship_four:
+          battleship_grid[key] = "B"
+        if key == cruiser_one:
+          battleship_grid[key] = "B"
+        if key == cruiser_two:
+          battleship_grid[key] = "B"
+        if key == cruiser_three:
+          battleship_grid[key] = "B"
+        if key == submarine_one:
+          battleship_grid[key] = "B"
+        if key == submarine_two:
+          battleship_grid[key] = "B"
+        if key == submarine_three:
+          battleship_grid[key] = "B"
+        if key == destroyer_one:
+          battleship_grid[key] = "B"
+        if key == destroyer_two:
+          battleship_grid[key] = "B"
+
       print (battleship_grid)
       
      
