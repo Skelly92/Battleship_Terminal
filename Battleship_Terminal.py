@@ -40,25 +40,25 @@ class Battleship():
       carrier_ship_five = "A5" #input("Please type in the grid number where you would like to place the Carrier ship: ")
       battleship_carrier = {}
 
-      # battleship_one = input("Please type in the grid number where you would like to place the Battleship: ")
-      # battleship_two = input("Please type in the grid number where you would like to place the Battleship: ")
-      # battleship_three = input("Please type in the grid number where you would like to place the Battleship: ")
-      # battleship_four = input("Please type in the grid number where you would like to place the Battleship: ")
-      # battleship_BS = {}
+      battleship_one = "B1" #input("Please type in the grid number where you would like to place the Battleship: ")
+      battleship_two = "B2" #input("Please type in the grid number where you would like to place the Battleship: ")
+      battleship_three = "B3" #input("Please type in the grid number where you would like to place the Battleship: ")
+      battleship_four = "B4" #input("Please type in the grid number where you would like to place the Battleship: ")
+      battleship_BS = {}
 
-      # cruiser_one = input("Please type in the grid number where you would like to place the Cruiser ship: ")
-      # cruiser_two = input("Please type in the grid number where you would like to place the Cruiser ship: ")
-      # cruiser_three = input("Please type in the grid number where you would like to place the Cruiser ship: ")
-      # battleship_cruiser = {}
+      cruiser_one = "C1" #input("Please type in the grid number where you would like to place the Cruiser ship: ")
+      cruiser_two = "C2" #input("Please type in the grid number where you would like to place the Cruiser ship: ")
+      cruiser_three = "C3" #input("Please type in the grid number where you would like to place the Cruiser ship: ")
+      battleship_cruiser = {}
 
-      # submarine_one = input("Please type in the grid number where you would like to place the Submarine: ")
-      # submarine_two = input("Please type in the grid number where you would like to place the Submarine: ")
-      # submarine_three = input("Please type in the grid number where you would like to place the Submarine: ")
-      # battleship_submarine = {}
+      submarine_one = "D1" #input("Please type in the grid number where you would like to place the Submarine: ")
+      submarine_two = "D2" #input("Please type in the grid number where you would like to place the Submarine: ")
+      submarine_three = "D3" #input("Please type in the grid number where you would like to place the Submarine: ")
+      battleship_submarine = {}
 
-      # destroyer_one = input("Please type in the grid number where you would like to place the Destroyer: ")
-      # destroyer_two = input("Please type in the grid number where you would like to place the Destroyer: ")
-      # battleship_destroyer = {}
+      destroyer_one = "E1" #input("Please type in the grid number where you would like to place the Destroyer: ")
+      destroyer_two = "E2" #input("Please type in the grid number where you would like to place the Destroyer: ")
+      battleship_destroyer = {}
       
       for key in grid.keys():
         if key == carrier_ship_one:
@@ -76,75 +76,110 @@ class Battleship():
         if key == carrier_ship_five:
           grid.update({key:"C"})
           battleship_carrier[key] = "C"
-        # if key == battleship_one:
-        #   grid[key] = "B"
-        #   battleship_BS = {key:"B"}
-        # if key == battleship_two:
-        #   grid[key] = "B"
-        #   battleship_BS = {key:"B"}
-        # if key == battleship_three:
-        #   grid[key] = "B"
-        #   battleship_BS = {key:"B"}
-        # if key == battleship_four:
-        #   grid[key] = "B"
-        #   battleship_BS = {key:"B"}
-        # if key == cruiser_one:
-        #   grid[key] = "Cr"
-        #   battleship_cruiser = {key:"Cr"}
-        # if key == cruiser_two:
-        #   grid[key] = "Cr"
-        #   battleship_cruiser = {key:"Cr"}
-        # if key == cruiser_three:
-        #   grid[key] = "Cr"
-        #   battleship_cruiser = {key:"Cr"}
-        # if key == submarine_one:
-        #   grid[key] = "S"
-        #   battleship_submarine = {key:"S"}
-        # if key == submarine_two:
-        #   grid[key] = "S"
-        #   battleship_submarine = {key:"S"}
-        # if key == submarine_three:
-        #   grid[key] = "S"
-        #   battleship_submarine = {key:"S"}
-        # if key == destroyer_one:
-        #   grid[key] = "D"
-        #   battleship_destroyer = {key:"D"}
-        # if key == destroyer_two:
-        #   grid[key] = "D"
-        #   battleship_destroyer = {key:"D"}
+        if key == battleship_one:
+          grid.update({key:"B"})
+          battleship_BS[key] = "B"
+        if key == battleship_two:
+          grid.update({key:"B"})
+          battleship_BS[key] = "B"
+        if key == battleship_three:
+          grid.update({key:"B"})
+          battleship_BS[key] = "B"
+        if key == battleship_four:
+          grid.update({key:"B"})
+          battleship_BS[key] = "B"
+        if key == cruiser_one:
+          grid.update({key:"CR"})
+          battleship_cruiser[key] = "CR"
+        if key == cruiser_two:
+          grid.update({key:"CR"})
+          battleship_cruiser[key] = "CR"
+        if key == cruiser_three:
+          grid.update({key:"CR"})
+          battleship_cruiser[key] = "CR"
+        if key == submarine_one:
+          grid.update({key:"S"})
+          battleship_submarine[key] = "S"
+        if key == submarine_two:
+          grid.update({key:"S"})
+          battleship_submarine[key] = "S"
+        if key == submarine_three:
+          grid.update({key:"S"})
+          battleship_submarine[key] = "S"
+        if key == destroyer_one:
+          grid.update({key:"D"})
+          battleship_destroyer[key] = "D"
+        if key == destroyer_two:
+          grid.update({key:"D"})
+          battleship_destroyer[key] = "D"
 
-      # print(battleship_carrier)
-      # print(grid)
-      
-      return battleship_carrier, grid
+      return battleship_carrier, battleship_BS, battleship_cruiser, battleship_submarine, battleship_destroyer, grid
       
 
      
     def battleship_attack(self):
-      battleship_carrier, grid  = Battleship.ship_placement(self)
-      print(battleship_carrier)
+      battleship_carrier, battleship_BS, battleship_cruiser, battleship_submarine, battleship_destroyer, grid  = Battleship.ship_placement(self)
       
       while True:
         attack = input("Please enter the coordinates for where you wish to attack: ")
         for key in grid.keys(): 
-          for value in grid.values():
-            if key == attack and grid[key] == "C":
-              grid[key] = "X"
-              battleship_carrier.pop(key)
-              print("Boom")
-              if battleship_carrier == {}:
-                print("You have sunk the carrier ship")
-              break
-            elif key == attack and grid[key] == "A":
-              grid[key] = "O"
-              print("Splosh")
-              break
-            elif attack == "End":
+          if key == attack and grid[key] == "C":
+            grid[key] = "X"
+            battleship_carrier.pop(key)
+            print("Boom")
+            if battleship_carrier == {}:
+              print("You have sunk the carrier ship!")
+            if battleship_carrier == {} and battleship_BS == {} and battleship_cruiser == {} and battleship_submarine == {} and battleship_destroyer == {}:
+              print("You have sunk all of the Battleships! You have won the game!!!")
               return False
+            break
+          elif key == attack and grid[key] == "B":
+            grid[key] = "X"
+            battleship_BS.pop(key)
+            print("Boom")
+            if battleship_BS == {}:
+              print("You have sunk the Battleship!")
+            if battleship_carrier == {} and battleship_BS == {} and battleship_cruiser == {} and battleship_submarine == {} and battleship_destroyer == {}:
+              print("You have sunk all of the Battleships! You have won the game!!!")
+              return False
+            break
+          elif key == attack and grid[key] == "CR":
+            grid[key] = "X"
+            battleship_cruiser.pop(key)
+            print("Boom")
+            if battleship_cruiser == {}:
+              print("You have sunk the Cruiser Ship!")
+            if battleship_carrier == {} and battleship_BS == {} and battleship_cruiser == {} and battleship_submarine == {} and battleship_destroyer == {}:
+              print("You have sunk all of the Battleships! You have won the game!!!")
+              return False
+            break
+          elif key == attack and grid[key] == "S":
+            grid[key] = "X"
+            battleship_submarine.pop(key)
+            print("Boom")
+            if battleship_submarine == {}:
+              print("You have sunk the Submarine!")
+            if battleship_carrier == {} and battleship_BS == {} and battleship_cruiser == {} and battleship_submarine == {} and battleship_destroyer == {}:
+              print("You have sunk all of the Battleships! You have won the game!!!")
+              return False
+            break
+          elif key == attack and grid[key] == "D":
+            grid[key] = "X"
+            battleship_destroyer.pop(key)
+            print("Boom")
+            if battleship_destroyer == {}:
+              print("You have sunk the Destroyer!")
+            if battleship_carrier == {} and battleship_BS == {} and battleship_cruiser == {} and battleship_submarine == {} and battleship_destroyer == {}:
+              print("You have sunk all of the Battleships! You have won the game!!!")
+              return False
+            break
+          elif key == attack and grid[key] == "A":
+            grid[key] = "O"
+            print("Splosh")
+            break
+          elif attack == "End":
+            return False
        
-
-
-            
+           
 x = Battleship()
-#x.grid()
 x.battleship_attack()
