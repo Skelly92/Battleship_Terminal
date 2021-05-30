@@ -17,16 +17,16 @@ class Battleship():
         9 |A9 |B9 |C9 |D9 |E9 |F9 |G9 |H9 |I9 |J9 |
         10|A10|B10|C10|D10|E10|F10|G10|H10|I10|J10|
         """)
-        one_list = {"A1": None ,"B1": None,"C1":None,"D1":None,"E1":None,"F1": None,"G1":None,"H1":None,"I1":None,"J1":None}
-        two_list = {"A2": None,"B2": None,"C2":None,"D2":None,"E2":None,"F2": None,"G2":None,"H2":None,"I2":None,"J2":None}
-        three_list = {"A3": None,"B3": None,"C3":None,"D3":None,"E3":None,"F3": None,"G3":None,"H3":None,"I3":None,"J3":None}
-        four_list = {"A4": None,"B4": None,"C4":None,"D4":None,"E4":None,"F4": None,"G4":None,"H4":None,"I4":None,"J4":None}
-        five_list = {"A5": None,"B5": None,"C5":None,"D5":None,"E5":None,"F5": None,"G5":None,"H5":None,"I5":None,"J5":None}
-        six_list = {"A6": None,"B6": None,"C6":None,"D6":None,"E6":None,"F6": None,"G6":None,"H6":None,"I6":None,"J6":None}
-        seven_list = {"A7": None,"B7": None,"C7":None,"D7":None,"E7":None,"F7": None,"G7":None,"H7":None,"I7":None,"J7":None}
-        eight_list = {"A8": None,"B8": None,"C8":None,"D8":None,"E8":None,"F8": None,"G8":None,"H8":None,"I8":None,"J8":None}
-        nine_list = {"A9": None,"B9": None,"C9":None,"D9":None,"E9":None,"F9": None,"G9":None,"H9":None,"I9":None,"J9":None}
-        ten_list = {"A10": None,"B10": None,"C10":None,"D10":None,"E10":None,"F10": None,"G10":None,"H10":None,"I10":None,"J10":None}
+        one_list = {"A1": "A" ,"B1": "A","C1":"A","D1":"A","E1":"A","F1": "A","G1":"A","H1":"A","I1":"A","J1":"A"}
+        two_list = {"A2": "A","B2": "A","C2":"A","D2":"A","E2":"A","F2": "A","G2":"A","H2":"A","I2":"A","J2":"A"}
+        three_list = {"A3": "A","B3": "A","C3":"A","D3":"A","E3":"A","F3": "A","G3":"A","H3":"A","I3":"A","J3":"A"}
+        four_list = {"A4": "A","B4": "A","C4":"A","D4":"A","E4":"A","F4": "A","G4":"A","H4":"A","I4":"A","J4":"A"}
+        five_list = {"A5": "A","B5": "A","C5":"A","D5":"A","E5":"A","F5": "A","G5":"A","H5":"A","I5":"A","J5":"A"}
+        six_list = {"A6": "A","B6": "A","C6":"A","D6":"A","E6":"A","F6": "A","G6":"A","H6":"A","I6":"A","J6":"A"}
+        seven_list = {"A7": "A","B7": "A","C7":"A","D7":"A","E7":"A","F7": "A","G7":"A","H7":"A","I7":"A","J7":"A"}
+        eight_list = {"A8": "A","B8": "A","C8":"A","D8":"A","E8":"A","F8": "A","G8":"A","H8":"A","I8":"A","J8":"A"}
+        nine_list = {"A9": "A","B9": "A","C9":"A","D9":"A","E9":"A","F9": "A","G9":"A","H9":"A","I9":"A","J9":"A"}
+        ten_list = {"A10": "A","B10": "A","C10":"A","D10":"A","E10":"A","F10": "A","G10":"A","H10":"A","I10":"A","J10":"A"}
         battleship_grid = {**one_list, **two_list, **three_list, **four_list, **five_list, **six_list, **seven_list, **eight_list, **nine_list, **ten_list}
         return battleship_grid
     
@@ -122,21 +122,20 @@ class Battleship():
      
     def battleship_attack(self):
       battleship_carrier, grid  = Battleship.ship_placement(self)
-      print(grid)
+      print(battleship_carrier)
       
       while True:
         attack = input("Please enter the coordinates for where you wish to attack: ")
         for key in grid.keys(): 
           for value in grid.values():
-            if key == attack and value == "C":
+            if key == attack and grid[key] == "C":
               grid[key] = "X"
               battleship_carrier.pop(key)
               print("Boom")
-              # if battleship_carrier == {}:
-              #   print("You have sunk the carrier ship")
+              if battleship_carrier == {}:
+                print("You have sunk the carrier ship")
               break
-            elif key == attack and value == None:
-              print(key)
+            elif key == attack and grid[key] == "A":
               grid[key] = "O"
               print("Splosh")
               break
