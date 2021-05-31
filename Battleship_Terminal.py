@@ -1,3 +1,4 @@
+import random
 class Battleship():
     def name(self):
         self = input("What is your name? ")
@@ -5,6 +6,35 @@ class Battleship():
     
     def grid(self):
         print("""
+
+
+        
+        ██████╗░░█████╗░████████╗████████╗██╗░░░░░███████╗░██████╗██╗░░██╗██╗██████╗░
+        ██╔══██╗██╔══██╗╚══██╔══╝╚══██╔══╝██║░░░░░██╔════╝██╔════╝██║░░██║██║██╔══██╗ 
+        ██████╦╝███████║░░░██║░░░░░░██║░░░██║░░░░░█████╗░░╚█████╗░███████║██║██████╔╝
+        ██╔══██╗██╔══██║░░░██║░░░░░░██║░░░██║░░░░░██╔══╝░░░╚═══██╗██╔══██║██║██╔═══╝░
+        ██████╦╝██║░░██║░░░██║░░░░░░██║░░░███████╗███████╗██████╔╝██║░░██║██║██║░░░░░
+        ╚═════╝░╚═╝░░╚═╝░░░╚═╝░░░░░░╚═╝░░░╚══════╝╚══════╝╚═════╝░╚═╝░░╚═╝╚═╝╚═╝░░░░░
+        ----------------------------------------------------------------------------
+        Welcome to the battleship terminal game!
+        ----------------------------------------------------------------------------
+
+        The rules for battleship are the following:
+
+        -You select where you are going to attack based on the 10x10 grid
+
+        -There are 5 battleships and there sizes are the following:
+
+        |Class of ship | Size |
+        |Carrier       |  5   |
+        |Battleship    |  4   |
+        |Cruiser       |  3   |
+        |Submarine     |  3   |
+        |Destroyer     |  2   |
+
+        -Once you have successfully destroyed all of them, you have won and the game will end.
+
+
           |A  |B  |C  |D  |E  |F  |G  |H  |I  |J  |
         1 |A1 |B1 |C1 |D1 |E1 |F1 |G1 |H1 |I1 |J1 |
         2 |A2 |B2 |C2 |D2 |E2 |F2 |G2 |H2 |I2 |J2 |
@@ -32,8 +62,8 @@ class Battleship():
     
     def ship_placement(self):
       grid = Battleship.grid(self)
-
-      carrier_ship_one = "A1" #input("Please type in the grid number where you would like to place the Carrier ship: ")
+      
+      carrier_ship_one = "A1" #random.choices(a) #input("Please type in the grid number where you would like to place the Carrier ship: ")
       carrier_ship_two = "A2" #input("Please type in the grid number where you would like to place the Carrier ship: ")
       carrier_ship_three = "A3" #input("Please type in the grid number where you would like to place the Carrier ship: ")
       carrier_ship_four = "A4" #input("Please type in the grid number where you would like to place the Carrier ship: ")
@@ -181,5 +211,5 @@ class Battleship():
             return False
        
            
-x = Battleship()
-x.battleship_attack()
+battleship = Battleship()
+battleship.battleship_attack()
